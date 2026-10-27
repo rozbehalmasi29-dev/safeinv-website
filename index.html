@@ -133,6 +133,28 @@
       .hero p { font-size: 16px; }
       h2 { font-size: 25px; }
     }
+    
+/* SafeInv official store badges */
+.store-badges {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.store-badge {
+  width: 200px;
+  max-width: 100%;
+}
+
+.store-badge img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
   </style>
 </head>
 <body>
@@ -154,10 +176,23 @@
     <div class="hero">
       <h1 data-i18n="headline">Your Inventory. <span>Organized.</span></h1>
       <p data-i18n="intro">Organize your home, workshop, or business inventory with offline storage, QR codes, and simple inventory tracking.</p>
-      <div class="actions">
-        <span class="button secondary" data-i18n="apple">App Store · Coming Soon</span>
-        <span class="button secondary" data-i18n="google">Google Play · Coming Soon</span>
-      </div>
+      
+<div class="store-badges" aria-label="App stores">
+  <div class="store-badge">
+    <img
+      src="assets/app-store-badge.svg"
+      alt="Download on the App Store"
+    >
+  </div>
+
+  <div class="store-badge">
+    <img
+      src="assets/google-play-badge.svg"
+      alt="Get it on Google Play"
+    >
+  </div>
+</div>
+
     </div>
 
     <section>
