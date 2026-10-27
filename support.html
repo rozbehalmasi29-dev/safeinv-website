@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="SafeInv official support, help, backup and restore guidance.">
+  <title>SafeInv | Support</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #101827;
+      --panel: #1b2639;
+      --line: #33445c;
+      --text: #f7f9ff;
+      --muted: #b5c1d3;
+      --purple: #8b5cf6;
+      --cyan: #00e5d6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .wrap { width: min(960px, 92%); margin: auto; }
+    header {
+      background: #141e30;
+      border-bottom: 1px solid var(--line);
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      padding: 18px 0;
+    }
+    .logo {
+      color: var(--purple);
+      font-size: 27px;
+      font-weight: 900;
+      text-decoration: none;
+    }
+    select {
+      background: var(--panel);
+      color: white;
+      border: 1px solid var(--cyan);
+      border-radius: 10px;
+      padding: 10px;
+    }
+    main { padding: 45px 0; }
+    h1 { font-size: clamp(30px, 6vw, 46px); }
+    h2 { color: var(--cyan); }
+    .intro { color: var(--muted); }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 24px;
+      margin: 18px 0;
+    }
+    .card p { color: var(--muted); }
+    a { color: var(--cyan); }
+    footer {
+      padding: 25px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a href="index.html" class="logo">SafeInv</a>
+      <select id="language" aria-label="Language">
+        <option value="en">English</option>
+        <option value="fa">فارسی</option>
+        <option value="es">Español</option>
+      </select>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1 data-i18n="title">SafeInv Support</h1>
+    <p class="intro" data-i18n="intro">
+      Find help with inventory organization, QR codes, and backup and restore.
+    </p>
+
+    <div class="card">
+      <h2 data-i18n="gettingStarted">Getting Started</h2>
+      <p data-i18n="gettingStartedDesc">
+        Open SafeInv and select Personal or Industrial mode. Create storage boxes,
+        add inventory items, and organize them by location.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="qr">QR Codes</h2>
+      <p data-i18n="qrDesc">
+        Use QR codes to identify storage boxes and inventory items.
+        You can display, download, and print supported QR labels.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="backup">Backup &amp; Restore</h2>
+      <p data-i18n="backupDesc">
+        Open Backup &amp; Restore in SafeInv to create a local backup file.
+        Store the backup in a safe location. Restoring an older backup may
+        replace newer inventory changes.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="offline">Offline Storage</h2>
+      <p data-i18n="offlineDesc">
+        SafeInv stores inventory locally on your device. If the app is removed
+        or your device is lost, locally stored data may be lost unless you
+        have a separate backup.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="contact">Contact Support</h2>
+      <p data-i18n="contactDesc">
+        For questions, bug reports, or assistance, contact the SafeInv developer.
+      </p>
+      <p>
+        <a href="https://github.com/rozbehalmasi29-dev/safeinv-website/issues"
+           data-i18n="report">
+          Report an issue on GitHub
+        </a>
+      </p>
+      <p data-i18n="privacyWarning">
+        Do not include passwords, personal information, or private inventory
+        data in public issue reports.
+      </p>
+    </div>
+
+    <p>
+      <a href="index.html" data-i18n="home">Back to Home</a>
+    </p>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      © 2026 SafeInv
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        title: "SafeInv Support",
+        intro: "Find help with inventory organization, QR codes, and backup and restore.",
+        gettingStarted: "Getting Started",
+        gettingStartedDesc: "Open SafeInv and select Personal or Industrial mode. Create storage boxes, add inventory items, and organize them by location.",
+        qr: "QR Codes",
+        qrDesc: "Use QR codes to identify storage boxes and inventory items. You can display, download, and print supported QR labels.",
+        backup: "Backup & Restore",
+        backupDesc: "Open Backup & Restore in SafeInv to create a local backup file. Store the backup in a safe location. Restoring an older backup may replace newer inventory changes.",
+        offline: "Offline Storage",
+        offlineDesc: "SafeInv stores inventory locally on your device. If the app is removed or your device is lost, locally stored data may be lost unless you have a separate backup.",
+        contact: "Contact Support",
+        contactDesc: "For questions, bug reports, or assistance, contact the SafeInv developer.",
+        report: "Report an issue on GitHub",
+        privacyWarning: "Do not include passwords, personal information, or private inventory data in public issue reports.",
+        home: "Back to Home"
+      },
+      fa: {
+        title: "پشتیبانی SafeInv",
+        intro: "راهنمای مدیریت موجودی، کدهای QR و پشتیبان‌گیری و بازیابی اطلاعات.",
+        gettingStarted: "شروع کار",
+        gettingStartedDesc: "برنامه را باز کنید و حالت شخصی یا صنعتی را انتخاب کنید. جعبه‌های نگهداری بسازید، آیتم‌ها را اضافه کنید و بر اساس محل مرتب کنید.",
+        qr: "کدهای QR",
+        qrDesc: "از کدهای QR برای شناسایی جعبه‌ها و آیتم‌ها استفاده کنید. می‌توانید برچسب‌های پشتیبانی‌شده را نمایش دهید، دانلود کنید یا چاپ کنید.",
+        backup: "پشتیبان‌گیری و بازیابی",
+        backupDesc: "در SafeInv بخش پشتیبان‌گیری و بازیابی را باز کنید و فایل پشتیبان محلی بسازید. فایل را در محل امن نگه دارید. بازیابی نسخه قدیمی ممکن است تغییرات جدیدتر را جایگزین کند.",
+        offline: "ذخیره‌سازی آفلاین",
+        offlineDesc: "SafeInv اطلاعات موجودی را روی دستگاه ذخیره می‌کند. در صورت حذف برنامه یا گم‌شدن دستگاه، بدون داشتن نسخه پشتیبان جداگانه ممکن است اطلاعات از دست بروند.",
+        contact: "ارتباط با پشتیبانی",
+        contactDesc: "برای پرسش‌ها، گزارش خطا یا دریافت راهنمایی با توسعه‌دهنده SafeInv ارتباط بگیرید.",
+        report: "گزارش مشکل در GitHub",
+        privacyWarning: "اطلاعات شخصی، رمز عبور یا اطلاعات خصوصی موجودی را در گزارش‌های عمومی وارد نکنید.",
+        home: "بازگشت به صفحه اصلی"
+      },
+      es: {
+        title: "Soporte de SafeInv",
+        intro: "Ayuda para organizar inventarios, usar códigos QR y crear o restaurar copias de seguridad.",
+        gettingStarted: "Primeros pasos",
+        gettingStartedDesc: "Abre SafeInv y selecciona el modo Personal o Industrial. Crea cajas, añade artículos y organízalos por ubicación.",
+        qr: "Códigos QR",
+        qrDesc: "Usa códigos QR para identificar cajas y artículos. Puedes mostrar, descargar e imprimir las etiquetas compatibles.",
+        backup: "Copia de seguridad y restauración",
+        backupDesc: "Abre Backup & Restore en SafeInv para crear una copia local. Guárdala en un lugar seguro. Restaurar una copia anterior puede reemplazar cambios recientes.",
+        offline: "Almacenamiento sin conexión",
+        offlineDesc: "SafeInv guarda el inventario localmente en tu dispositivo. Si eliminas la aplicación o pierdes el dispositivo, podrías perder los datos sin una copia de seguridad independiente.",
+        contact: "Contactar con soporte",
+        contactDesc: "Para preguntas, errores o asistencia, contacta con el desarrollador de SafeInv.",
+        report: "Informar de un problema en GitHub",
+        privacyWarning: "No incluyas contraseñas, información personal ni datos privados de inventario en informes públicos.",
+        home: "Volver al inicio"
+      }
+    };
+
+    function setLanguage(lang) {
+      if (!Object.hasOwn(translations, lang)) lang = "en";
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === "fa" ? "rtl" : "ltr";
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const value = translations[lang][el.dataset.i18n];
+        if (value !== undefined) el.textContent = value;
+      });
+      document.getElementById("language").value = lang;
+    }
+
+    document.getElementById("language").addEventListener("change", e => {
+      setLanguage(e.target.value);
+    });
+
+    setLanguage("en");
+  </script>
+</body>
+</html>
