@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="SafeInv is an offline inventory management app for personal and industrial organization.">
+  <title>SafeInv | Your Inventory. Organized.</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #101827;
+      --panel: #1b2639;
+      --line: #33445c;
+      --text: #f7f9ff;
+      --muted: #b5c1d3;
+      --purple: #8b5cf6;
+      --cyan: #00e5d6;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background: radial-gradient(ellipse at 50% 0%, #24204d, transparent 55%), var(--bg);
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1100px, 92%); margin: auto; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: #101827e8;
+      position: sticky;
+      top: 0;
+      z-index: 5;
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 15px 0;
+    }
+    .logo {
+      font-size: 26px;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--purple), #2563eb);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    select {
+      background: var(--panel);
+      color: white;
+      border: 1px solid var(--cyan);
+      border-radius: 10px;
+      padding: 10px;
+      font-size: 15px;
+    }
+    .hero { text-align: center; padding: 90px 0 70px; }
+    .hero h1 {
+      font-size: clamp(36px, 7vw, 64px);
+      line-height: 1.15;
+      margin: 0 0 20px;
+    }
+    .hero h1 span { color: var(--cyan); }
+    .hero p {
+      max-width: 690px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 18px;
+    }
+    .actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+    .button {
+      border: 1px solid var(--cyan);
+      border-radius: 12px;
+      padding: 13px 23px;
+      text-decoration: none;
+      font-weight: 750;
+      background: #103d42;
+      color: #d8fffa;
+    }
+    .button.secondary {
+      border-color: var(--line);
+      background: var(--panel);
+      color: var(--muted);
+    }
+    h2 { font-size: 30px; margin-bottom: 22px; }
+    section { padding: 42px 0; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .card {
+      padding: 24px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+    }
+    .card h3 { color: var(--cyan); margin-top: 0; }
+    .card p { color: var(--muted); margin-bottom: 0; }
+    .download {
+      text-align: center;
+      border: 1px solid #4b3b90;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #28215c, #11283c);
+      padding: 38px 20px;
+    }
+    footer {
+      margin-top: 50px;
+      border-top: 1px solid var(--line);
+      padding: 28px 0;
+      color: var(--muted);
+    }
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    [dir="rtl"] .nav { direction: rtl; }
+    @media (max-width: 700px) {
+      .cards { grid-template-columns: 1fr; }
+      .hero { padding: 60px 0 40px; }
+      .hero p { font-size: 16px; }
+      h2 { font-size: 25px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="logo">SafeInv</div>
+      <label>
+        <span class="sr-only" style="position:absolute;left:-9999px">Language</span>
+        <select id="language" aria-label="Language">
+          <option value="en">English</option>
+          <option value="fa">فارسی</option>
+          <option value="es">Español</option>
+        </select>
+      </label>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <h1 data-i18n="headline">Your Inventory. <span>Organized.</span></h1>
+      <p data-i18n="intro">Organize your home, workshop, or business inventory with offline storage, QR codes, and simple inventory tracking.</p>
+      <div class="actions">
+        <span class="button secondary" data-i18n="apple">App Store · Coming Soon</span>
+        <span class="button secondary" data-i18n="google">Google Play · Coming Soon</span>
+      </div>
+    </div>
+
+    <section>
+      <h2 data-i18n="features">Everything in its place</h2>
+      <div class="cards">
+        <article class="card">
+          <h3 data-i18n="personal">Personal Inventory</h3>
+          <p data-i18n="personalDesc">Organize household items, tools, collections, and storage boxes.</p>
+        </article>
+        <article class="card">
+          <h3 data-i18n="industrial">Industrial Inventory</h3>
+          <p data-i18n="industrialDesc">Track parts, quantities, locations, and reorder points.</p>
+        </article>
+        <article class="card">
+          <h3 data-i18n="qr">QR Codes</h3>
+          <p data-i18n="qrDesc">Generate and scan QR codes to identify boxes and inventory items.</p>
+        </article>
+        <article class="card">
+          <h3 data-i18n="summary">Inventory Summary</h3>
+          <p data-i18n="summaryDesc">View total items, quantities, and storage boxes.</p>
+        </article>
+        <article class="card">
+          <h3 data-i18n="backup">Backup & Restore</h3>
+          <p data-i18n="backupDesc">Create local backup files and restore saved inventory.</p>
+        </article>
+        <article class="card">
+          <h3 data-i18n="offline">Offline First</h3>
+          <p data-i18n="offlineDesc">Manage your inventory locally without an account or continuous internet connection.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="download">
+        <h2 data-i18n="ready">Get ready for SafeInv</h2>
+        <p data-i18n="readyDesc">SafeInv is preparing for public release on iOS and Android.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-links">
+        <a href="support.html" data-i18n="support">Support</a>
+        <a href="privacy.html" data-i18n="privacy">Privacy Policy</a>
+      </div>
+      <p>© 2026 SafeInv. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        headline: 'Your Inventory. <span>Organized.</span>',
+        intro: 'Organize your home, workshop, or business inventory with offline storage, QR codes, and simple inventory tracking.',
+        apple: 'App Store · Coming Soon',
+        google: 'Google Play · Coming Soon',
+        features: 'Everything in its place',
+        personal: 'Personal Inventory',
+        personalDesc: 'Organize household items, tools, collections, and storage boxes.',
+        industrial: 'Industrial Inventory',
+        industrialDesc: 'Track parts, quantities, locations, and reorder points.',
+        qr: 'QR Codes',
+        qrDesc: 'Generate and scan QR codes to identify boxes and inventory items.',
+        summary: 'Inventory Summary',
+        summaryDesc: 'View total items, quantities, and storage boxes.',
+        backup: 'Backup & Restore',
+        backupDesc: 'Create local backup files and restore saved inventory.',
+        offline: 'Offline First',
+        offlineDesc: 'Manage your inventory locally without an account or continuous internet connection.',
+        ready: 'Get ready for SafeInv',
+        readyDesc: 'SafeInv is preparing for public release on iOS and Android.',
+        support: 'Support',
+        privacy: 'Privacy Policy'
+      },
+      fa: {
+        headline: 'موجودی شما، <span>منظم و در دسترس.</span>',
+        intro: 'وسایل خانه، کارگاه یا موجودی کسب‌وکار خود را با جعبه‌ها، کدهای QR و مدیریت آفلاین سامان‌دهی کنید.',
+        apple: 'اپ استور · به‌زودی',
+        google: 'گوگل پلی · به‌زودی',
+        features: 'هر وسیله در جای خودش',
+        personal: 'موجودی شخصی',
+        personalDesc: 'وسایل خانه، ابزارها، مجموعه‌ها و جعبه‌های نگهداری را مرتب کنید.',
+        industrial: 'موجودی صنعتی',
+        industrialDesc: 'قطعات، تعداد، محل نگهداری و نقطه سفارش را مدیریت کنید.',
+        qr: 'کدهای QR',
+        qrDesc: 'برای شناسایی جعبه‌ها و آیتم‌ها کد QR ایجاد و اسکن کنید.',
+        summary: 'خلاصه موجودی',
+        summaryDesc: 'تعداد آیتم‌ها، مجموع موجودی و جعبه‌ها را ببینید.',
+        backup: 'پشتیبان‌گیری و بازیابی',
+        backupDesc: 'از موجودی خود فایل پشتیبان محلی تهیه کنید و آن را بازیابی کنید.',
+        offline: 'طراحی‌شده برای استفاده آفلاین',
+        offlineDesc: 'بدون حساب کاربری یا اتصال دائمی اینترنت، موجودی خود را روی دستگاه مدیریت کنید.',
+        ready: 'SafeInv به‌زودی منتشر می‌شود',
+        readyDesc: 'نسخه عمومی SafeInv برای iOS و Android در حال آماده‌سازی است.',
+        support: 'پشتیبانی',
+        privacy: 'حریم خصوصی'
+      },
+      es: {
+        headline: 'Tu inventario. <span>Organizado.</span>',
+        intro: 'Organiza tu hogar, taller o negocio con almacenamiento sin conexión, códigos QR y seguimiento de inventario.',
+        apple: 'App Store · Próximamente',
+        google: 'Google Play · Próximamente',
+        features: 'Todo en su lugar',
+        personal: 'Inventario personal',
+        personalDesc: 'Organiza artículos del hogar, herramientas, colecciones y cajas.',
+        industrial: 'Inventario industrial',
+        industrialDesc: 'Controla piezas, cantidades, ubicaciones y puntos de reposición.',
+        qr: 'Códigos QR',
+        qrDesc: 'Genera y escanea códigos QR para identificar cajas y artículos.',
+        summary: 'Resumen del inventario',
+        summaryDesc: 'Consulta artículos, cantidades y cajas de almacenamiento.',
+        backup: 'Copia de seguridad y restauración',
+        backupDesc: 'Crea copias locales y restaura tu inventario guardado.',
+        offline: 'Diseñado para funcionar sin conexión',
+        offlineDesc: 'Gestiona tu inventario localmente sin cuenta ni conexión permanente.',
+        ready: 'SafeInv llegará pronto',
+        readyDesc: 'Estamos preparando el lanzamiento público de SafeInv para iOS y Android.',
+        support: 'Soporte',
+        privacy: 'Política de privacidad'
+      }
+    };
+
+    function setLanguage(lang) {
+      if (!Object.hasOwn(translations, lang)) lang = 'en';
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'fa' ? 'rtl' : 'ltr';
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const value = translations[lang][el.dataset.i18n];
+        if (value === undefined) return;
+        if (el.dataset.i18n === 'headline') {
+          el.innerHTML = value;
+        } else {
+          el.textContent = value;
+        }
+      });
+      document.getElementById('language').value = lang;
+    }
+
+    document.getElementById('language').addEventListener('change', e => {
+      setLanguage(e.target.value);
+    });
+
+    setLanguage('en');
+  </script>
+</body>
+</html>
