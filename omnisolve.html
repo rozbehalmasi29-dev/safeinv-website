@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101827">
+<meta name="description" content="Discover OmniSolve AI, an upcoming offline-first AI-assisted mathematics, science and engineering app from R&R Lab.">
+<title>OmniSolve AI | Coming Soon | R&R Lab</title>
+<style>
+:root {
+  color-scheme: dark;
+  --bg: #101827;
+  --panel: #1b2639;
+  --line: #33445c;
+  --text: #f7f9ff;
+  --muted: #b5c1d3;
+  --cyan: #00e5d6;
+  --purple: #8b5cf6;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  background: radial-gradient(ellipse at 50% 0%, #24204d, transparent 55%), var(--bg);
+  line-height: 1.65;
+}
+a { color: inherit; }
+.wrap { width: min(1100px, 92%); margin: auto; }
+header {
+  border-bottom: 1px solid var(--line);
+  background: #101827ee;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 17px 0;
+}
+.brand {
+  font-size: 24px;
+  font-weight: 900;
+  text-decoration: none;
+  color: var(--cyan);
+}
+.back {
+  color: var(--muted);
+  text-decoration: none;
+}
+.back:hover, .back:focus-visible { color: var(--cyan); }
+.hero {
+  text-align: center;
+  padding: 65px 0 35px;
+}
+.eyebrow {
+  color: var(--cyan);
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+h1 {
+  font-size: clamp(42px, 8vw, 76px);
+  line-height: 1.12;
+  margin: 14px 0;
+}
+h1 span { color: var(--cyan); }
+.lead {
+  max-width: 740px;
+  margin: 15px auto;
+  color: var(--muted);
+  font-size: 19px;
+}
+.status {
+  display: inline-block;
+  padding: 7px 18px;
+  margin: 15px 0;
+  border: 1px solid #6754b4;
+  border-radius: 99px;
+  background: #28215c;
+  color: #e8dcff;
+  font-weight: 700;
+}
+.preview {
+  width: min(100%, 480px);
+  margin: 28px auto 0;
+}
+.preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  border: 1px solid #504786;
+  box-shadow: 0 18px 55px rgba(0,0,0,.4);
+}
+.preview figcaption {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 13px;
+}
+section { padding: 35px 0; }
+h2 { font-size: clamp(25px, 4vw, 34px); }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.card {
+  padding: 24px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+.card h3 {
+  color: var(--cyan);
+  margin: 0 0 10px;
+}
+.card p { color: var(--muted); margin: 0; }
+.notice {
+  text-align: center;
+  border: 1px solid #51408c;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #28215c, #11283c);
+  padding: 32px 20px;
+}
+.notice p { color: var(--muted); }
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid var(--cyan);
+  border-radius: 12px;
+  background: #103d42;
+  color: #d8fffa;
+  text-decoration: none;
+  font-weight: 750;
+}
+footer {
+  border-top: 1px solid var(--line);
+  padding: 28px 0;
+  margin-top: 45px;
+  color: var(--muted);
+}
+@media (max-width: 700px) {
+  .grid { grid-template-columns: 1fr; }
+  .hero { padding-top: 45px; }
+  .lead { font-size: 16px; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="./">R&amp;R Lab</a>
+    <a class="back" href="./">&larr; Back to SafeInv</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <div class="eyebrow">Our Next App · In Development</div>
+    <h1>OmniSolve <span>AI</span></h1>
+    <p class="lead"><strong>Solve. Understand. Verify.</strong></p>
+    <p class="lead">
+      An ambitious AI-assisted workspace designed to bring mathematics,
+      science, engineering and technical problem-solving together.
+    </p>
+    <div class="status">Coming Soon · iOS &amp; Android Planned</div>
+
+    <figure class="preview">
+      <img src="assets/omnisolve-preview.png"
+           alt="OmniSolve AI app interface preview"
+           loading="eager">
+      <figcaption>Development preview. Interface and features may change.</figcaption>
+    </figure>
+  </div>
+
+  <section>
+    <h2>One Workspace. Many Disciplines.</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Mathematics</h3>
+        <p>Working toward guided equation solving, algebra and mathematical reasoning.</p>
+      </article>
+      <article class="card">
+        <h3>Physics</h3>
+        <p>Explore physical principles, formulas and engineering calculations.</p>
+      </article>
+      <article class="card">
+        <h3>Chemistry</h3>
+        <p>Planned assistance with chemical concepts, equations and calculations.</p>
+      </article>
+      <article class="card">
+        <h3>Engineering</h3>
+        <p>Expanding toward electrical, mechanical and civil engineering topics.</p>
+      </article>
+      <article class="card">
+        <h3>Aerospace &amp; Robotics</h3>
+        <p>Specialized technical problem-solving is part of the development roadmap.</p>
+      </article>
+      <article class="card">
+        <h3>Statistics &amp; Finance</h3>
+        <p>Planned statistical analysis and financial calculation tools.</p>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <div class="notice">
+      <h2>AI Assistance, Designed for Offline Use</h2>
+      <p>
+        OmniSolve AI is being developed with the goal of providing
+        useful on-device AI assistance without depending on a
+        continuous internet connection.
+      </p>
+      <p>
+        <strong>Coming to Google Play and the Apple App Store.</strong>
+      </p>
+      <p>
+        OmniSolve AI remains in active development. Features,
+        availability and release timing are subject to change.
+      </p>
+      <a class="button" href="./">Explore SafeInv</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    © 2026 R&amp;R Lab. OmniSolve AI is currently in development.
+  </div>
+</footer>
+</body>
+</html>
